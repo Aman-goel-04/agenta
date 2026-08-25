@@ -116,6 +116,7 @@ export const EmailPasswordForm = ({
                 placeholder="Enter valid email address"
                 value={email}
                 disabled={lockEmail}
+                autoFocus={!lockEmail}
                 className={clsx(
                     "auth-input",
                     lockEmail && "auth-locked-input",
@@ -129,6 +130,7 @@ export const EmailPasswordForm = ({
                 aria-label="Password"
                 placeholder="Enter your password"
                 value={password}
+                autoFocus={lockEmail}
                 className={clsx("auth-input", message.type === "error" && "auth-input-error")}
                 onChange={(event) => setPassword(event.target.value)}
             />

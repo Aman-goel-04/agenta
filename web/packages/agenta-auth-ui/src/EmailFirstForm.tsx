@@ -60,6 +60,7 @@ export const EmailFirstForm = ({
                     value={email}
                     disabled={disabled}
                     onChange={(event) => setEmail(event.target.value)}
+                    autoFocus
                     className={clsx(
                         "auth-input",
                         promoted && "auth-input-promoted",

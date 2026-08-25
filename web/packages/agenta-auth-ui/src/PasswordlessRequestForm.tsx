@@ -70,6 +70,7 @@ export const PasswordlessRequestForm = ({
                 placeholder="Enter valid email address"
                 value={email}
                 disabled={lockEmail}
+                autoFocus={!lockEmail}
                 className={clsx("auth-input", lockEmail && "auth-locked-input")}
                 onChange={(event) => setEmail(event.target.value)}
             />
